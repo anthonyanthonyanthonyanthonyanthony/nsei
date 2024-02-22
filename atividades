@@ -1,0 +1,289 @@
+1 - Crie um programa que solicite ao usuário digitar um número. Se o número for positivo, exiba "Número positivo", caso contrário, exiba "Número negativo".
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner ler = new Scanner(System.in);
+		System.out.println("digite um numero: ");
+		int num = ler.nextInt();
+		
+		if (num >=0) {
+			System.out.println("O numero é positivo");
+		}
+		else {
+			System.out.println("o numero é negativo");
+		}
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+2 - Peça ao usuário para inserir dois números inteiros. Compare os números e imprima uma mensagem indicando se são iguais, diferentes, o primeiro é maior ou o segundo é maior.
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner ler = new Scanner(System.in);
+		System.out.println("Digite o primeiro numero");
+		int num1 = ler.nextInt();
+		Scanner ler2 = new Scanner(System.in);
+		System.out.println("Digite o segundo numero");
+		int num2 = ler2.nextInt();
+		
+		if (num1 == num2){System.out.println("Os numeros digitados são iguais");
+	}
+		if (num1 != num2){
+			System.out.println("os numeros são diferentes");
+		}
+		if (num1 > num2) {
+			System.out.println("o primeiro numero é maior que o segundo");			
+		}
+		if (num1 < num2){ 
+			System.out.println("o segundo numero é maior que o primeiro");
+		}
+		}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3 - Crie um menu que oferece duas opções ao usuário: "1. Calcular área do quadrado" e "2. Calcular área do círculo". Solicite a escolha do usuário e realize o cálculo da área com base na opção selecionada.
+package exercicios;
+import java.util.Scanner;
+public class Exercicio3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		double num1, r, res=0;
+		int valor;
+		Scanner ler = new Scanner(System.in);
+		String menu = """
+		*******************************
+		Escolha uma das opções:
+		1 - calcular a area do quadrado;
+		2 - calcular a area do circulo;
+		*******************************
+				""";
+		System.out.println("digite um valor");
+		num1 = ler.nextDouble();
+		r = num1 / 2;
+		
+		System.out.println(menu);
+		valor = ler.nextInt();
+		
+		r = num1 / 2;
+		switch(valor) {
+		case 1:
+			res = num1 * num1;
+			break;
+		case 2:
+			res = Math.PI * r*2;
+			br
+		}
+		System.out.println("o resultado é:"+res);
+		}
+	}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+4 - Crie um programa que solicite ao usuário um número e exiba a tabuada desse número de 1 a 10.
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num, i=1,res;
+		System.out.println("insira um numero");
+		Scanner ler = new Scanner(System.in);
+		num = ler.nextInt(); 
+		while (i<=10) {
+			res = num * i;
+		System.out.println("tabuada:"+num +"x" +i +"=" +res);
+		i++;
+		}
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+5 - Crie um programa que solicite ao usuário a entrada de um número inteiro. Verifique se o número é par ou ímpar e exiba uma mensagem correspondente.
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner ler = new Scanner(System.in);
+		int num,res;
+		System.out.println("digite um numero");
+		num = ler.nextInt();
+		res = num % 2;
+		if (res % 2 == 0) {
+			System.out.println("o numero é par");
+		}
+		else {
+			System.out.println("o numero é impar");
+		}
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+6 - Crie um programa que solicite ao usuário um número e calcule o fatorial desse número.
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	int num, cont, fat = 1;
+	Scanner ler = new Scanner(System.in); 
+	System.out.println("digite um numero");
+	num = ler.nextInt();
+	cont = 1;
+	while (cont <=  num) {
+		
+		fat *= cont;
+		cont++;
+		}
+	    System.out.println("fatorial de:" +num +" é: " +fat);
+	}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+7 - Faixa Etária: Receba a idade de uma pessoa e imprima se ela é: menor de idade, adulta ou idosa (use, por exemplo, 18 para adulta e 60 para idosa).
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio7 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int idade;
+		Scanner ler = new Scanner(System.in);
+		System.out.println("Digite sua idade");
+		idade = ler.nextInt();
+		
+		if (idade < 18) {
+			System.out.println("você é menor de idade!");
+		}
+		if (idade > 18 && idade < 60 ) {
+			System.out.println("você é adulto");
+		}
+		if (idade > 60) {
+			System.out.println("você é idoso");
+		}
+}
+}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+8 - Soma dos Números Ímpares: Peça ao usuário que insira um número inteiro n. Calcule e imprima a soma dos primeiros n números ímpares. Por exemplo, se o usuário inserir 4, o programa deve 
+calcular a soma de 1 + 3 + 5 + 7 = 16.
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio8 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num, i = 1, res = 1;
+		Scanner ler = new Scanner(System.in);
+		System.out.println("digite um numero");
+		num = ler.nextInt();
+		
+		while (i<num) {
+			res = num * num;
+			i++;
+		}
+		System.out.println("a soma dos numeros impares é: " +res);
+	}
+
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+9 - Lista de Nomes: Peça ao usuário para inserir 5 nomes (um de cada vez). Após inserir todos os nomes, peça outro nome e use um loop for para percorrer a lista e verificar se o 6º(último) nome 
+digitado está presente no array dos 5 nomes informados inicialmente.
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio9 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		    
+		        Scanner scanner = new Scanner(System.in);
+		        
+		        String[] nomes = new String[5];
+		        
+		        for (int i = 0; i < 5; i++) {
+		            System.out.print("digite um nome: ");
+		            nomes[i] = scanner.nextLine();
+		        }
+		        
+		        System.out.print("digite um nome pra conferir se esta na lista: ");
+		        String verif = scanner.nextLine();
+		        
+		        boolean encontrado = false;
+		        for (int i = 0; i < 5; i++) {
+		            if (nomes[i].equalsIgnoreCase(verif)) {
+		                encontrado = true;
+		                break;
+		            }
+		        }
+		        
+		        if (encontrado) {
+		            System.out.println("O nome " + verif + " esta na lista.");
+		        } else {
+		            System.out.println("O nome " + verif + " nao esta na lista.");
+		        }       
+}
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+10 - Senha Secreta: Defina uma senha secreta (por exemplo: "Java123"). Use um loop while para pedir ao usuário que insira a senha. Se a senha estiver incorreta, continue pedindo a senha e informe 
+ao usuário que a tentativa foi inválida. Se ele acertar, saia do loop e imprima uma mensagem de sucesso.
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio10 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String senha1 = "coxinha123";
+        
+        Scanner ler = new Scanner(System.in);
+        String senha2;
+        while (true) {
+            System.out.println("Digite a senha: ");
+            senha2 = ler.next();
+            
+            if (senha2.equals(senha1)) {
+                System.out.println("Senha correta");
+                break; // 
+            } else {
+                System.out.println("senha incorreta amigão tente novamente");
+            }
+        }
+    }
+}

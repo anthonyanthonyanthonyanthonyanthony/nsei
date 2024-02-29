@@ -1,16 +1,150 @@
 Soma de Matrizes:
 Desenvolva um programa que realiza a soma de duas matrizes 3X3, exibindo o resultado no console. 
 
+package exercicios;
+import java.util.Scanner;
+public class Exercicio {
 
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+int[][] matriz1 = new int[3][3];
+int[][] matriz2 = new int[3][3];
+Scanner ler = new Scanner(System.in);
+Scanner ler2 = new Scanner(System.in);
 
+for (int n = 0; n <= 2; n++) {
+    for (int c = 0; c <= 2; c++) {
+        System.out.println("Digite um numero para a primeira matriz" +"\n");
+        matriz1[n][c] = ler.nextInt();
+        System.out.println("Digite um numero para a segunda matriz" +"\n");
+        matriz2[n][c] = ler2.nextInt();
+    }
+}
 
+int[][] res = new int[3][3];
+for (int i = 0; i < 3; i++) {
+    for (int j = 0; j < 3; j++) {
+        res[i][j] = matriz1[i][j] + matriz2[i][j];
+    }
+}
+
+System.out.println("Resultado da soma das duas matrizes:");
+for (int[] linha : res) {
+    for (int elemento : linha) {
+        System.out.print(elemento + " ");
+    }
+    System.out.println();
+}
+}
+	
+    }
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Multiplicação de Matriz por Escalar:
 Crie um programa que verifique se um login e senha confere com os dados de uma matriz 6x2.
 
+package exercicios;
+import java.util.Scanner;
+public class Exercicio {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+String [] [] conta = new String [6] [2];
+String usuario;
+String senha;
+conta [0] [0] = "login1";
+conta [0] [1] = "senha1";
+conta [1] [0] = "login2";
+conta [1] [1] = "senha2";
+conta [2] [0] = "login3";
+conta [2] [1] = "senha3";
+conta [3] [0] = "login4";
+conta [3] [1] = "senha4";
+conta [4] [0] = "login5";
+conta [4] [1] = "senha5";
+conta [5] [0] = "login6";
+conta [5] [1] = "senha6";
+
+Scanner ler = new Scanner(System.in);
+System.out.println("Digite o login: ");
+usuario = ler.nextLine();
+
+boolean logindigitado =false;
+
+for(int i=0; i<6; i++) {
+	if(conta[i][0].equals(usuario)) {
+		logindigitado = true;
+		break;
+	}
+}
+ if(logindigitado) {
+	 System.out.println("login correto." +"\n");
+ }
+ 
+ else {
+	 System.out.println("login incorreto." +"\n");
+ }
+ System.out.println("Digite a senha:" +"\n");
+ senha = ler.nextLine();
+ boolean senhadigitada =false;
+
+	for(int l=0; l<6; l++) {
+		if(conta[l][1].equals(senha)) {
+			senhadigitada = true;
+			break;
+		}
+	}
+	 if(senhadigitada) {
+		 System.out.println("senha correta." +"\n");
+	 }
+	 
+	 else {
+		 System.out.println("senha incorreta." +"\n");
+	 }
+	}
+	
+    }
+	
 
 
 
-
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Transposição de Matriz:
-Desenvolva um código que realiza a transposição de uma matriz (as colunas viram linhas e as linhas viram colunas). Peça aos usuários para inserirem os elementos da matriz, exibindo a matriz transposta no console.
+Desenvolva um código que realiza a transposição de uma matriz (as colunas viram linhas e as linhas viram colunas). Peça aos usuários para inserirem os elementos da matriz, exibindo a matriz 
+transposta no console.
+
+package exercicios;
+import java.util.Scanner;
+public class Exercicio {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner ler = new Scanner(System.in);
+String [][] matriz = new String[2][2];	
+String [][] transposta = new String[2][2];
+	for (int l = 0; l < 2 ; l++) {
+		for(int c = 0; c < 2 ; c++) {
+			System.out.println("insira elementos");
+			matriz [l] [c] = ler.next();
+			
+		}
+	}
+	for (int l = 0; l < 2; l++) {
+        for(int c = 0; c < 2; c++) {
+            transposta[c][l] = matriz[l][c];
+        }
+    }
+	System.out.println("Matriz Transposta:");
+    for (int l = 0; l < 2; l++) {
+        for(int c = 0; c < 2; c++) {
+            System.out.print(transposta[l][c] + " ");
+        }
+        System.out.println();
+}
+}
+}
+	
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
